@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="auth">
+      <div class="auth__img auth__img--register">{{>logo}}</div>
+      <div class="auth__content">
+        <div class="auth__logo">{{>logo}}</div>
+        <div class="auth__wrapper">
+          <h1 class="auth__title">Utworz swoje konto</h1>
+          <form class="auth__form" action="">
+            <div class="auth__row">
+              <i class="fa-regular fa-user auth__inputIcon"></i>
+              <input
+                class="auth__input"
+                placeholder="Nazwa"
+                type="text"
+                name="nazwa"
+              />
+            </div>
+            <div class="auth__row">
+              <i class="fa-solid fa-envelope auth__inputIcon"></i>
+              <input
+                class="auth__input"
+                placeholder="E-mail"
+                type="E-mail"
+                name="email"
+              />
+            </div>
+            <div class="auth__row">
+              <i class="fa-solid fa-key auth__inputIcon"></i>
+              <input
+                class="auth__input"
+                placeholder="Wpisz haslo"
+                type="password"
+                name="password"
+              />
+            </div>
+            <div class="auth__row">
+              <i class="fa-solid fa-key auth__inputIcon"></i>
+              <input
+                class="auth__input"
+                placeholder="Powtorz haslo"
+                type="password"
+                name="password"
+              />
+            </div>
+            <div class="auth__row">
+              <button class="auth__button">Zarejestruj</button>
+            </div>
+          </form>
+          <p class="auth__info">
+            Nie masz konta? <a href="login.html">Zaloguj</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter</title>
+    {{>head}}
+  </head>
+
+  <body class="app">
+    {{>navigation}} {{>sidebar}}
+    <main class="mainContent">
+      <div class="container">
+        <section class="settings">
+          <h1 class="settings__title">Ustawienia</h1>
+          <h4 class="settings__sectionTitle">General</h4>
+          <a href="">
+            <div class="settings__item">
+              <div class="settings__itemIconBg">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <span class="settings__itemText">Account information</span>
+              <i class="settings__arrow fa-solid fa-angle-right"></i>
+            </div>
+          </a>
+          <a href="">
+            <div class="settings__item">
+              <div class="settings__itemIconBg">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <span class="settings__itemText">Account information</span>
+              <i class="settings__arrow fa-solid fa-angle-right"></i>
+            </div>
+          </a>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

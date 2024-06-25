@@ -1,0 +1,42 @@
+@use "../abstaract/" as *;
+
+.settings {
+  background-color: $settings-bg-color;
+  padding: 48px;
+
+  &__title {
+    margin: 0 0 48px 0;
+  }
+
+  &__sectionTitle {
+    font-size: 12px;
+    margin: 0 0 8px 0;
+  }
+
+  &__item {
+    border-bottom: 2px solid #efefef;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+
+  &__itemIconBg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  &__itemText {
+    font-size: 14px;
+  }
+
+  &__arrow {
+    margin-left: auto;
+  }
+}
