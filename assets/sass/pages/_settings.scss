@@ -1,42 +1,56 @@
-@use "../abstaract/" as *;
+@use '../abstaract/'as *;
 
 .settings {
-  background-color: $settings-bg-color;
-  padding: 48px;
+    background-color: #fff;
+    padding: 20px 50px 50px 50px;
+    border-radius: 9px;
 
-  &__title {
-    margin: 0 0 48px 0;
-  }
+    &__title {
+        font-weight: 700;
+        padding: 0 0 40px 0;
+        font-size: 32px;
+        color: $settings-menu-item-color;
+    }
 
-  &__sectionTitle {
-    font-size: 12px;
-    margin: 0 0 8px 0;
-  }
+    &__miniTitle {
+        font-size: 12px;
+        font-weight: 600;
+        color: $settings-title-color;
+    }
 
-  &__item {
-    border-bottom: 2px solid #efefef;
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 8px;
-  }
+    &__menu {
+        @include resetList;
 
-  &__itemIconBg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-  }
+        li {
+            border-bottom: 1px solid $settings-accessories-color;
 
-  &__itemText {
-    font-size: 14px;
-  }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
 
-  &__arrow {
-    margin-left: auto;
-  }
+    &__menuItem {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    &__menuBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menuTitle {
+        font-weight: 600;
+        font-size: 14px;
+        color: $settings-menu-item-color;
+    }
+
+    &__menuEnd {
+        color: $settings-accessories-color;
+    }
 }

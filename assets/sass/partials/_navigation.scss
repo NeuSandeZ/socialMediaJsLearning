@@ -1,58 +1,63 @@
-@use "../abstaract/" as *;
+@use '../abstaract/'as *;
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 30px;
-  background-color: $navigation-bg-color;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.03);
-  width: 100%;
-  position: fixed;
-  inset: 0 auto auto 0;
-  z-index: 10;
-
-  &__menu {
-    @include resetList();
+    position: fixed;
+    width: 100%;
+    inset: 0 auto auto 0;
     display: flex;
-    gap: 10px;
-  }
-
-  &__menuItem {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: $navigation-menuItem-bg-color;
-    color: $navigation-menuItem-color;
+    padding: 20px 30px;
+    background-color: $navigation-bg-color;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .03);
+    z-index: 10;
 
     @include big-tablet {
-      height: 36px;
-      width: 36px;
-    }
-  }
+        padding: 15px;
 
-  @include big-tablet {
-    padding: 15px;
+        .logo__icon {
+            font-size: 24px;
+        }
 
-    .logo__icon {
-      font-size: 24px;
+        .logo__name {
+            font-size: 20px
+        }
+
+        &__middleBar {
+            position: fixed;
+            inset: auto auto 0 0;
+            background-color: $navigation-bg-color;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
     }
 
-    .logo__name {
-      font-size: 20px;
+    &__menu {
+        @include resetList;
+        display: flex;
+        gap: 10px;
     }
 
-    &__middleBar {
-      position: fixed;
-      width: 100%;
-      display: flex;
-      inset: auto auto 0 0;
-      justify-content: center;
-      background-color: $navigation-bg-color;
-      padding: 10px 0;
+    &__menuItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: $navigation-menu-item-bg-color;
+        color: $navigation-menu-item-color;
+
+        &:hover {
+            background-color: #3c73da55;
+            color: $theme-color;
+        }
+
+        @include big-tablet {
+            height: 36px;
+            width: 36px;
+        }
     }
-  }
 }
